@@ -19,25 +19,23 @@ function TodoContainer() {
   ]);
   const [newTodo, setNewTodo] = useState("");
 
-  const addNote = (event) => {
+  const addNote = event => {
     event.preventDefault();
     todos.push(newTodo);
     setNewTodo("");
   };
 
-  const deleteNote = (event) => {
+  const deleteNote = event => {
     const { value } = event.target;
     const newTodoArray = todos.filter((todo) => todo !== value);
     setTodos(newTodoArray);
   };
 
-  const clearNotes = (event) => {
-    const { value } = event.target;
-    const newTodoArray = todos.filter((todo) => todo !== value);
-    setTodos(newTodoArray);
+  const clearNotes = () => {
+    setTodos([]);
   };
 
-  const handleInputChange = (event) => {
+  const handleInputChange = event => {
     const { value } = event.target;
     setNewTodo(value);
   };
