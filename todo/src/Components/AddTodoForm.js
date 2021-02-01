@@ -28,7 +28,7 @@ function AddTodoForm(props) {
             <Form.Text className="text-muted">
               ex. Clean my room, Call Mom
             </Form.Text>
-          </Form.Group>
+          </Form.Group> 
           <Row>
             <Button
               className="add-btn"
