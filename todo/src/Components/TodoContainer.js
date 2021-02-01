@@ -24,7 +24,33 @@ function TodoContainer() {
 
   return (
     <Container className="note">
+        <Row>
+        <Col className="add-title">Add an item!</Col>
+      </Row>
+      <Row>
+        <Col className="add-form">
+          <Form>
+            <Form.Group controlId="formAddNote">
+              <Form.Control
+                as="textarea"
+                placeholder="What do you need to do today?"
+              />
+              <Form.Text className="text-muted">
+                ex. Clean my room, Call Mom
+              </Form.Text>
+            </Form.Group>
 
+            <Button className="add-btn" variant="primary" type="submit">
+              Add
+            </Button>
+          </Form>
+        </Col>
+      </Row>
+      <Row className="todo-row">
+          {todos.map((t, i) => (
+            <Todo key={i} item={t} />
+          ))}
+      </Row>
     </Container>
   );
 }
