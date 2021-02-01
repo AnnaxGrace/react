@@ -1,0 +1,36 @@
+.note {
+    background-image: url("../notepad.png");
+    height: 100rem;
+    background-repeat: no-repeat;
+}
+
+
+/* elements within the sticky note */
+.add-title {
+    margin-top: 5em;
+    margin-left: 17em;
+}
+
+.add-form {
+    margin-top: 6em;
+    margin-left: 4em;
+    width: 500px;
+}
+
+Form {
+    width: 300px;
+}
+
+.add-btn {
+    margin-left: 14em;
+}
+
+.todo-row {
+    margin-top: 6.8em;
+    margin-left: 50em;
+}
+
+li {
+    margin-bottom: 20px;
+    margin-left: 130px;
+}
