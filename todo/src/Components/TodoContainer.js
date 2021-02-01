@@ -11,7 +11,6 @@ import Image from "react-bootstrap/Image";
 import Notepad from "./assets/notepad.png";
 
 import "./assets/css/container.css";
-// {props.item}
 
 function TodoContainer() {
   const [todos, setTodos] = useState([
@@ -21,6 +20,16 @@ function TodoContainer() {
     "pray",
     "repeat",
   ]);
+  const [newTodo, setNewTodo] = useState();
+
+  const addNote = event => {
+      console.log(newTodo)
+  }
+
+  const handleInputChange = event => {
+    const { value } = event.target
+    setNewTodo(value);
+}
 
   return (
     <Container className="note">
@@ -33,6 +42,7 @@ function TodoContainer() {
             <Form.Group controlId="formAddNote">
               <Form.Control
                 as="textarea"
+                onChange = {handleInputChange}
                 placeholder="What do you need to do today?"
               />
               <Form.Text className="text-muted">
@@ -40,7 +50,7 @@ function TodoContainer() {
               </Form.Text>
             </Form.Group>
 
-            <Button className="add-btn" variant="primary" type="submit">
+            <Button className="add-btn" variant="primary" onClick={addNote}>
               Add
             </Button>
           </Form>
