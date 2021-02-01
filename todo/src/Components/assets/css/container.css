@@ -1,7 +1,12 @@
+body {
+    font-family: 'Hachi Maru Pop', cursive;
+}
+
 .note {
     background-image: url("../notepad.png");
     height: 100rem;
     background-repeat: no-repeat;
+    font-family: 'Hachi Maru Pop', cursive;
 }
 
 
@@ -9,6 +14,7 @@
 .add-title {
     margin-top: 5em;
     margin-left: 17em;
+    font-family: 'Hachi Maru Pop', cursive;
 }
 
 .add-form {
@@ -24,6 +30,11 @@ Form {
 .add-btn {
     margin-left: 7.7em;
     margin-right: 10px;
+    font-family: 'Arvo', serif;
+}
+
+.clear-btn {
+    font-family: 'Arvo', serif;
 }
 
 .todo-row {
@@ -33,6 +44,7 @@ Form {
 
 /* ************** */
 
+/* elements in the todos Row */
 ul {
     list-style-type: none;
 }
@@ -48,3 +60,6 @@ li {
     font-size: 10px;
     padding: 3px 6px;
 }
+
+
+/* ***************** */

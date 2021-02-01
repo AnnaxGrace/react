@@ -28,7 +28,7 @@ function AddTodoForm(props) {
             <Form.Text className="text-muted">
               ex. Clean my room, Call Mom
             </Form.Text>
-          </Form.Group> 
+          </Form.Group>
           <Row>
             <Button
               className="add-btn"
@@ -37,7 +37,11 @@ function AddTodoForm(props) {
             >
               Add
             </Button>
-            <Button variant="danger" onClick={props.clearNotes}>
+            <Button
+              className="clear-btn"
+              variant="danger"
+              onClick={props.clearNotes}
+            >
               Clear all items
             </Button>
           </Row>

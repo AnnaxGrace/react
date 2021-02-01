@@ -43,7 +43,7 @@ function TodoContainer() {
   return (
     <Container className="note">
       <Row>
-        <Col className="add-title">Add an item!</Col>
+        <Col className="add-title"><h2>Add an item!</h2></Col>
       </Row>
       <AddTodoForm
         newTodo={newTodo}
