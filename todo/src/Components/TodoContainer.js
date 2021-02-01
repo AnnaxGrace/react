@@ -30,12 +30,15 @@ function TodoContainer() {
 
   const deleteNote = (event) => {
       const { value } = event.target
-      console.log(value)
       const newTodoArray = todos.filter(todo => todo !== value);
-      console.log(newTodoArray);
       setTodos(newTodoArray);
-      console.log(todos)
   }
+
+  const clearNotes = (event) => {
+    const { value } = event.target
+    const newTodoArray = todos.filter(todo => todo !== value);
+    setTodos(newTodoArray);
+}
 
   const handleInputChange = event => {
     const { value } = event.target;
@@ -61,10 +64,14 @@ function TodoContainer() {
                 ex. Clean my room, Call Mom
               </Form.Text>
             </Form.Group>
-
+            <Row>
             <Button className="add-btn" variant="primary" onClick={addNote}>
               Add
             </Button>
+            <Button variant="danger" onClick={clearNotes}>
+              Clear all items
+            </Button>
+            </Row>
           </Form>
         </Col>
       </Row>

@@ -22,7 +22,9 @@ Form {
 }
 
 .add-btn {
-    margin-left: 14em;
+    /* margin-left: 15.4em; */
+    margin-left: 7.7em;
+    margin-right: 10px;
 }
 
 .todo-row {
