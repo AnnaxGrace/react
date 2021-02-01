@@ -11,7 +11,7 @@ function Todo(props) {
         <Row>
           <Col>{props.item}</Col>
           <Col>
-            <DeleteBtn />
+            <DeleteBtn deleteNote={props.deleteNote} value={props.item} />
           </Col>
         </Row>
       </li>

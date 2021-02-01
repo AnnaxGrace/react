@@ -22,13 +22,18 @@ function TodoContainer() {
   ]);
   const [newTodo, setNewTodo] = useState("");
 
-  const addNote = (event) => {
+  const addNote = event => {
     event.preventDefault();
     todos.push(newTodo);
     setNewTodo("");
   };
 
-  const handleInputChange = (event) => {
+  const deleteNote = (event) => {
+      const { value } = event.target
+      console.log(value)
+  }
+
+  const handleInputChange = event => {
     const { value } = event.target;
     setNewTodo(value);
   };
@@ -62,7 +67,7 @@ function TodoContainer() {
       <Row className="todo-row">
         <ul>
           {todos.map((t, i) => (
-            <Todo key={i} item={t} />
+            <Todo key={i} item={t} deleteNote={deleteNote}/>
           ))}
         </ul>
       </Row>
