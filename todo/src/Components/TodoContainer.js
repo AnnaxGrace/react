@@ -24,7 +24,7 @@ function TodoContainer() {
 
   return (
     <Container className="note">
-        <Row>
+      <Row>
         <Col className="add-title">Add an item!</Col>
       </Row>
       <Row>
@@ -47,9 +47,11 @@ function TodoContainer() {
         </Col>
       </Row>
       <Row className="todo-row">
+        <ul>
           {todos.map((t, i) => (
             <Todo key={i} item={t} />
           ))}
+        </ul>
       </Row>
     </Container>
   );
