@@ -5,12 +5,9 @@ import Todo from "./Todo";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
-import Image from "react-bootstrap/Image";
-import Notepad from "./assets/notepad.png";
 
 import "./assets/css/container.css";
+import AddTodoForm from "./AddTodoForm";
 
 function TodoContainer() {
   const [todos, setTodos] = useState([
@@ -22,25 +19,25 @@ function TodoContainer() {
   ]);
   const [newTodo, setNewTodo] = useState("");
 
-  const addNote = event => {
+  const addNote = (event) => {
     event.preventDefault();
     todos.push(newTodo);
     setNewTodo("");
   };
 
   const deleteNote = (event) => {
-      const { value } = event.target
-      const newTodoArray = todos.filter(todo => todo !== value);
-      setTodos(newTodoArray);
-  }
+    const { value } = event.target;
+    const newTodoArray = todos.filter((todo) => todo !== value);
+    setTodos(newTodoArray);
+  };
 
   const clearNotes = (event) => {
-    const { value } = event.target
-    const newTodoArray = todos.filter(todo => todo !== value);
+    const { value } = event.target;
+    const newTodoArray = todos.filter((todo) => todo !== value);
     setTodos(newTodoArray);
-}
+  };
 
-  const handleInputChange = event => {
+  const handleInputChange = (event) => {
     const { value } = event.target;
     setNewTodo(value);
   };
@@ -50,35 +47,16 @@ function TodoContainer() {
       <Row>
         <Col className="add-title">Add an item!</Col>
       </Row>
-      <Row>
-        <Col className="add-form">
-          <Form>
-            <Form.Group controlId="formAddNote">
-              <Form.Control
-                as="textarea"
-                value={newTodo}
-                onChange={handleInputChange}
-                placeholder="What do you need to do today?"
-              />
-              <Form.Text className="text-muted">
-                ex. Clean my room, Call Mom
-              </Form.Text>
-            </Form.Group>
-            <Row>
-            <Button className="add-btn" variant="primary" onClick={addNote}>
-              Add
-            </Button>
-            <Button variant="danger" onClick={clearNotes}>
-              Clear all items
-            </Button>
-            </Row>
-          </Form>
-        </Col>
-      </Row>
+      <AddTodoForm
+        newTodo={newTodo}
+        addNote={addNote}
+        clearNotes={clearNotes}
+        handleInputChange={handleInputChange}
+      />
       <Row className="todo-row">
         <ul>
           {todos.map((t, i) => (
-            <Todo key={i} item={t} deleteNote={deleteNote}/>
+            <Todo key={i} item={t} deleteNote={deleteNote} />
           ))}
         </ul>
       </Row>
