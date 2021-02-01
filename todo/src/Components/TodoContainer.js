@@ -20,16 +20,18 @@ function TodoContainer() {
     "pray",
     "repeat",
   ]);
-  const [newTodo, setNewTodo] = useState();
+  const [newTodo, setNewTodo] = useState("");
 
-  const addNote = event => {
-      console.log(newTodo)
-  }
+  const addNote = (event) => {
+    event.preventDefault();
+    todos.push(newTodo);
+    setNewTodo("");
+  };
 
-  const handleInputChange = event => {
-    const { value } = event.target
+  const handleInputChange = (event) => {
+    const { value } = event.target;
     setNewTodo(value);
-}
+  };
 
   return (
     <Container className="note">
@@ -42,7 +44,8 @@ function TodoContainer() {
             <Form.Group controlId="formAddNote">
               <Form.Control
                 as="textarea"
-                onChange = {handleInputChange}
+                value={newTodo}
+                onChange={handleInputChange}
                 placeholder="What do you need to do today?"
               />
               <Form.Text className="text-muted">
