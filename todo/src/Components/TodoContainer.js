@@ -18,9 +18,11 @@ function TodoContainer() {
     "repeat",
   ]);
   const [newTodo, setNewTodo] = useState("");
+  const [showGifs, setShowGifs] = useState({"showTrash": false, "showPencil": false});
 
   const addNote = event => {
     event.preventDefault();
+    showAnimation("showPencil");
     todos.push(newTodo);
     setNewTodo("");
   };
@@ -41,6 +43,15 @@ function TodoContainer() {
     setNewTodo(value);
   };
 
+  const showAnimation = (animation) => {
+    console.log("running?")
+    console.log(animation)
+    setShowGifs({...showGifs, [animation]: true});
+    setInterval(function(){
+      setShowGifs({...showGifs, [animation]: false});
+    }, 2000)
+  }
+
   return (
     <Container className="note">
       <Row>
@@ -51,6 +62,7 @@ function TodoContainer() {
         addNote={addNote}
         clearNotes={clearNotes}
         handleInputChange={handleInputChange}
+        showGifs={showGifs}
       />
       <Row className="todo-row">
         <ul>

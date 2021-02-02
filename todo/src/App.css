@@ -22,6 +22,11 @@ a {
   right: 500px;
 }
 
+.pencil {
+  position: fixed;
+  right: 500px;
+}
+
 
 /* elements within the sticky note */
 .add-title {
@@ -41,13 +46,25 @@ Form {
 }
 
 .add-btn {
+  margin-left: 10em;
+  margin-right: 10px;
+  font-family: 'Arvo', serif;
+  height: 70px;
+  width: 70px;
+}
+
+/* .add-btn-test {
   margin-left: 7em;
   margin-right: 10px;
   font-family: 'Arvo', serif;
-}
+  height: 70px;
+  width: 70px;
+} */
 
 .clear-btn {
   font-family: 'Arvo', serif;
+  height: 70px;
+  width: 70px;
 }
 
 .todo-row {

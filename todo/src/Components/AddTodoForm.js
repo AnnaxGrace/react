@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import TrashCanGif from "./assets/trashcangif1.gif"
+import PencilGif from "./assets/pencilGif.gif"
 
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
@@ -8,7 +9,8 @@ import Button from "react-bootstrap/Button";
 
 
 function AddTodoForm(props) {
-  console.log(props);
+  const [showGifs, setShowGifs] = useState(false);
+  console.log(props)
 
   return (
     <Row>
@@ -31,17 +33,21 @@ function AddTodoForm(props) {
               variant="primary"
               onClick={props.addNote}
             >
-              Add
+              {props.showGifs.showPencil ? <img src={PencilGif} width="55" height="55"/> : "Add" }
+              {/* Add */}
+              {/* <img src={PencilGif} width="55" height="55"/> */}
+
             </Button>
             <Button
               className="clear-btn"
               variant="danger"
               onClick={props.clearNotes}
             >
-              Clear all items
+              {/* Clear list */}
+              <img src={TrashCanGif} width="50" height="50"/> 
             </Button>
-            <iframe src="https://giphy.com/embed/KE52mSdaYgGMWq67jo" width="50" height="50" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/transparent-haveaniceday-steffilynn-KE52mSdaYgGMWq67jo"></a></p>
-            <img src={TrashCanGif} width="50" height="50"/>
+            {/* <img src={TrashCanGif} width="20" height="20"/>            
+            <img src={PencilGif} width="5" height="5"/> */}
           </Row>
           
         </Form>
