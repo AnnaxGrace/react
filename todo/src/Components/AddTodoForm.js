@@ -9,8 +9,6 @@ import Button from "react-bootstrap/Button";
 
 
 function AddTodoForm(props) {
-  const [showGifs, setShowGifs] = useState(false);
-  console.log(props)
 
   return (
     <Row>
@@ -44,7 +42,8 @@ function AddTodoForm(props) {
               onClick={props.clearNotes}
             >
               {/* Clear list */}
-              <img src={TrashCanGif} width="50" height="50"/> 
+              {props.showGifs.showTrash ? <img src={TrashCanGif} width="50" height="50"/> : "Clear List"}
+              {/* <img src={TrashCanGif} width="50" height="50"/>  */}
             </Button>
             {/* <img src={TrashCanGif} width="20" height="20"/>            
             <img src={PencilGif} width="5" height="5"/> */}

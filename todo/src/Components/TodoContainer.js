@@ -30,11 +30,13 @@ function TodoContainer() {
   //add animation here?
   const deleteNote = event => {
     const { value } = event.target;
+    // showAnimation("showTrash");
     const newTodoArray = todos.filter((todo) => todo !== value);
     setTodos(newTodoArray);
   };
 
   const clearNotes = () => {
+    showAnimation("showTrash");
     setTodos([]);
   };
 
@@ -49,7 +51,7 @@ function TodoContainer() {
     setShowGifs({...showGifs, [animation]: true});
     setInterval(function(){
       setShowGifs({...showGifs, [animation]: false});
-    }, 2000)
+    }, 3000)
   }
 
   return (
