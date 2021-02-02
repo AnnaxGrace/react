@@ -14,7 +14,7 @@ function App() {
       <header className="App-header">
       <HashRouter basename="/">
         <NavBar />
-        <img src={logo} className="App-logo" alt="logo" />
+        {/* <img src={logo} className="App-logo" alt="logo" /> */}
         {/* <div>
           <br />
           <p>Create a News Site</p>

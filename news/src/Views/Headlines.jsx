@@ -1,7 +1,15 @@
 import React from 'react';
 import Article from '../Components/Article';
+import API from "../utils/API";
 
 function Headlines() {
+
+    const runAPI = () => {
+        API.getHeadlines().then(results => {
+            console.log(results)
+          });
+    }
+
     return (
         <div>
             <h1>Headline News goes here: </h1> 
@@ -9,6 +17,7 @@ function Headlines() {
             <Article/>
             <Article/>
             <Article/>
+            <button onClick ={runAPI} >Click for API</button>
         </div>
     )
 }
