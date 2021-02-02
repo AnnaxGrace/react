@@ -10,7 +10,7 @@ function Todo(props) {
       <li>
         <Row>
         <input type="checkbox" />
-          <Col>{props.item}</Col>
+          <Col><strong>{props.item}</strong></Col>
           <Col>
             <DeleteBtn deleteNote={props.deleteNote} value={props.item} />
           </Col>

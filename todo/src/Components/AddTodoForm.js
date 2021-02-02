@@ -1,18 +1,13 @@
 import React from "react";
-import DeleteBtn from "./DeleteBtn";
+
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
-import Image from "react-bootstrap/Image";
-import Notepad from "./assets/notepad.png";
+
 
 function AddTodoForm(props) {
   console.log(props);
-  // const handleInputChange = event => {
-  //     const { value } = event.target;
-  //     setNewTodo(value);
-  //   };
 
   return (
     <Row>

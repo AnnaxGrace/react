@@ -1,6 +1,11 @@
-body {
-    font-family: 'Hachi Maru Pop', cursive;
+header {
+    font-family: 'Arvo', serif;
+    background-color: #fbd842;
+    border: 2px solid black;
+    padding: 20px;
 }
+
+
 
 .note {
     background-image: url("../notepad.png");
