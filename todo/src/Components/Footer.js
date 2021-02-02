@@ -5,6 +5,7 @@ function Footer() {
     <>
       <footer>
       <p>&copy; Copyright Anna Grace Conover</p>
+      <p>GIFS by Giphy</p>
       </footer>
     </>
   );

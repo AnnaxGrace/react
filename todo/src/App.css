@@ -17,6 +17,11 @@ main {
   font-family: 'Hachi Maru Pop', cursive;
 }
 
+a {
+  position: fixed;
+  right: 500px;
+}
+
 
 /* elements within the sticky note */
 .add-title {
@@ -47,7 +52,6 @@ Form {
 
 .todo-row {
   margin-top: 7em;
-  margin-left: 50em;
 }
 
 /* ************** */

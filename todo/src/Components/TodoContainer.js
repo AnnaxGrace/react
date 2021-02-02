@@ -25,6 +25,7 @@ function TodoContainer() {
     setNewTodo("");
   };
 
+  //add animation here?
   const deleteNote = event => {
     const { value } = event.target;
     const newTodoArray = todos.filter((todo) => todo !== value);

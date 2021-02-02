@@ -1,4 +1,5 @@
 import React from "react";
+import TrashCanGif from "./assets/trashcangif1.gif"
 
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
@@ -39,7 +40,10 @@ function AddTodoForm(props) {
             >
               Clear all items
             </Button>
+            <iframe src="https://giphy.com/embed/KE52mSdaYgGMWq67jo" width="50" height="50" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/transparent-haveaniceday-steffilynn-KE52mSdaYgGMWq67jo"></a></p>
+            <img src={TrashCanGif} width="50" height="50"/>
           </Row>
+          
         </Form>
       </Col>
     </Row>
