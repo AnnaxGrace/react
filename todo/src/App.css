@@ -1,5 +1,6 @@
-header, footer {
-  font-family: 'Arvo', serif;
+header,
+footer {
+  font-family: "Arvo", serif;
   background-color: #fbd842;
   border: 2px solid black;
   padding: 20px;
@@ -9,30 +10,18 @@ main {
   background-color: #c9a568;
 }
 
-
 .note {
   background-image: url("./Components/assets/notepad.png");
   height: 70rem;
   background-repeat: no-repeat;
-  font-family: 'Hachi Maru Pop', cursive;
+  font-family: "Hachi Maru Pop", cursive;
 }
-
-a {
-  position: fixed;
-  right: 500px;
-}
-
-.pencil {
-  position: fixed;
-  right: 500px;
-}
-
 
 /* elements within the sticky note */
 .add-title {
   margin-top: 3em;
   margin-left: 8em;
-  font-family: 'Hachi Maru Pop', cursive;
+  font-family: "Hachi Maru Pop", cursive;
 }
 
 .add-form {
@@ -45,30 +34,20 @@ Form {
   width: 300px;
 }
 
+.add-btn,
+.clear-btn {
+  font-family: "Arvo", serif;
+  height: 70px;
+  width: 70px;
+}
+
 .add-btn {
   margin-left: 10em;
   margin-right: 10px;
-  font-family: 'Arvo', serif;
-  height: 70px;
-  width: 70px;
-}
-
-/* .add-btn-test {
-  margin-left: 7em;
-  margin-right: 10px;
-  font-family: 'Arvo', serif;
-  height: 70px;
-  width: 70px;
-} */
-
-.clear-btn {
-  font-family: 'Arvo', serif;
-  height: 70px;
-  width: 70px;
 }
 
 .todo-row {
-  margin-top: 7em;
+  margin-top: 8em;
 }
 
 /* ************** */
@@ -89,6 +68,5 @@ li {
   font-size: 10px;
   padding: 3px 6px;
 }
-
 
 /* ***************** */

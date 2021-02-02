@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import TrashCanGif from "./assets/trashcangif1.gif"
 import PencilGif from "./assets/pencilGif.gif"
 
@@ -7,8 +7,7 @@ import Row from "react-bootstrap/Row";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 
-
-function AddTodoForm(props) {
+function AddTodoForm({newTodo, addNote, clearNotes, handleInputChange, showGifs}) {
 
   return (
     <Row>
@@ -17,8 +16,8 @@ function AddTodoForm(props) {
           <Form.Group controlId="formAddNote">
             <Form.Control
               as="textarea"
-              value={props.newTodo}
-              onChange={props.handleInputChange}
+              value={newTodo}
+              onChange={handleInputChange}
               placeholder="What do you need to do today?"
             />
             <Form.Text className="text-muted">
@@ -29,24 +28,17 @@ function AddTodoForm(props) {
             <Button
               className="add-btn"
               variant="primary"
-              onClick={props.addNote}
+              onClick={addNote}
             >
-              {props.showGifs.showPencil ? <img src={PencilGif} width="55" height="55"/> : "Add" }
-              {/* Add */}
-              {/* <img src={PencilGif} width="55" height="55"/> */}
-
+              {showGifs.showPencil ? <img src={PencilGif} width="55" height="55" alt="writing pencil animation"/> : "Add" }
             </Button>
             <Button
               className="clear-btn"
               variant="danger"
-              onClick={props.clearNotes}
+              onClick={clearNotes}
             >
-              {/* Clear list */}
-              {props.showGifs.showTrash ? <img src={TrashCanGif} width="50" height="50"/> : "Clear List"}
-              {/* <img src={TrashCanGif} width="50" height="50"/>  */}
+              {showGifs.showTrash ? <img src={TrashCanGif} width="50" height="50" alt="opening trash can animation"/> : "Clear List"}
             </Button>
-            {/* <img src={TrashCanGif} width="20" height="20"/>            
-            <img src={PencilGif} width="5" height="5"/> */}
           </Row>
           
         </Form>

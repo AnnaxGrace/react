@@ -7,8 +7,6 @@ import Col from "react-bootstrap/Col";
 import Todo from "./Todo";
 import AddTodoForm from "./AddTodoForm";
 
-
-
 function TodoContainer() {
   const [todos, setTodos] = useState([
     "eat",
@@ -18,19 +16,20 @@ function TodoContainer() {
     "repeat",
   ]);
   const [newTodo, setNewTodo] = useState("");
-  const [showGifs, setShowGifs] = useState({"showTrash": false, "showPencil": false});
+  const [showGifs, setShowGifs] = useState({
+    showTrash: false,
+    showPencil: false,
+  });
 
-  const addNote = event => {
+  const addNote = (event) => {
     event.preventDefault();
     showAnimation("showPencil");
     todos.push(newTodo);
     setNewTodo("");
   };
 
-  //add animation here?
-  const deleteNote = event => {
+  const deleteNote = (event) => {
     const { value } = event.target;
-    // showAnimation("showTrash");
     const newTodoArray = todos.filter((todo) => todo !== value);
     setTodos(newTodoArray);
   };
@@ -40,40 +39,40 @@ function TodoContainer() {
     setTodos([]);
   };
 
-  const handleInputChange = event => {
+  const handleInputChange = (event) => {
     const { value } = event.target;
     setNewTodo(value);
   };
 
   const showAnimation = (animation) => {
-    console.log("running?")
-    console.log(animation)
-    setShowGifs({...showGifs, [animation]: true});
-    setInterval(function(){
-      setShowGifs({...showGifs, [animation]: false});
-    }, 3000)
-  }
+    setShowGifs({ ...showGifs, [animation]: true });
+    setInterval(function () {
+      setShowGifs({ ...showGifs, [animation]: false });
+    }, 3000);
+  };
 
   return (
-    <Container className="note">
-      <Row>
-        <Col className="add-title"><h2>Add an item!</h2></Col>
-      </Row>
-      <AddTodoForm
-        newTodo={newTodo}
-        addNote={addNote}
-        clearNotes={clearNotes}
-        handleInputChange={handleInputChange}
-        showGifs={showGifs}
-      />
-      <Row className="todo-row">
-        <ul>
-          {todos.map((t, i) => (
-            <Todo key={i} item={t} deleteNote={deleteNote} />
-          ))}
-        </ul>
-      </Row>
-    </Container>
+      <Container className="note">
+        <Row>
+          <Col className="add-title">
+            <h2>Add an item!</h2>
+          </Col>
+        </Row>
+        <AddTodoForm
+          newTodo={newTodo}
+          addNote={addNote}
+          clearNotes={clearNotes}
+          handleInputChange={handleInputChange}
+          showGifs={showGifs}
+        />
+        <Row className="todo-row">
+          <ul>
+            {todos.map((t, i) => (
+              <Todo key={i} item={t} deleteNote={deleteNote} />
+            ))}
+          </ul>
+        </Row>
+      </Container>
   );
 }
 

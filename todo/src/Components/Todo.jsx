@@ -4,15 +4,15 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 
 
-function Todo(props) {
+function Todo({item, deleteNote}) {
   return (
     <>
       <li>
         <Row>
         <input type="checkbox" />
-          <Col><strong>{props.item}</strong></Col>
+          <Col><strong>{item}</strong></Col>
           <Col>
-            <DeleteBtn deleteNote={props.deleteNote} value={props.item} />
+            <DeleteBtn deleteNote={deleteNote} value={item} />
           </Col>
         </Row>
       </li>
