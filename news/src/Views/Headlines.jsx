@@ -5,7 +5,7 @@ import API from "../utils/API";
 function Headlines() {
 
     const runAPI = () => {
-        API.getHeadlines().then(results => {
+        API.getPolitics().then(results => {
             console.log(results)
           });
     }
