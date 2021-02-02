@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 
-import Todo from "./Todo";
-
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-// import "./assets/css/container.css";
+import Todo from "./Todo";
 import AddTodoForm from "./AddTodoForm";
+
+
 
 function TodoContainer() {
   const [todos, setTodos] = useState([
