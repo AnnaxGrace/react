@@ -1,31 +1,31 @@
-import React, {useEffect, useState} from 'react';
-import Article from '../Components/Article';
+import React, { useEffect, useState } from "react";
+import Article from "../Components/Article";
 import API from "../utils/API";
 import { selectTopFive } from "../utils/tools";
 
 function Headlines() {
-    const [articles, setArticles] = useState([]);
+  const [articles, setArticles] = useState([]);
 
-    useEffect(() => {
-        API.getHeadlines().then(results => {
-            console.log(results.data.articles)
-            setArticles(selectTopFive(results.data.articles))
-          });
-    }, [])
+  useEffect(() => {
+    API.getHeadlines().then((results) => {
+      console.log(results.data.articles);
+      setArticles(selectTopFive(results.data.articles));
+    });
+  }, []);
 
-    return (
-        <div>
-            <h1>Headline News goes here: </h1> 
-            {articles.map((article,i) => (
-                <Article
-                    key={i}
-                    title={article[i].title}
-                    thumbnail={article[i].urlToImage}
-                    content={article[i].content}
-                />
-            ))}
-        </div>
-    )
+  return (
+    <>
+      <h1>Headline News goes here: </h1>
+      {articles.map((article, i) => (
+        <Article
+          key={i}
+          title={article[i].title}
+          thumbnail={article[i].urlToImage}
+          content={article[i].content}
+        />
+      ))}
+    </>
+  );
 }
 
 export default Headlines;

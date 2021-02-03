@@ -1,4 +1,3 @@
-import logo from "./tek_logo.png";
 import { HashRouter, Route } from "react-router-dom";
 import "./App.css";
 import NavBar from "./Components/NavBar";
