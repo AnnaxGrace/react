@@ -1,9 +1,10 @@
+//going to take data out of local storage
+
 import React from "react";
 
-function Article(props) {
-  const { title, thumbnail, description } = props;
-  const fullArticleDirect = () => {
-      localStorage.setItem("article", JSON.stringify(props))
+function Article() {
+  
+    const fullArticleDirect = () => {
     console.log("yay");
   };
 

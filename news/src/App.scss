@@ -67,17 +67,26 @@ article {
   margin-left: 3em;
   padding: 10px 5px;
 
+  button {
+    border: none;
+    background-color: white;
+  }
+
+  button:hover {
+    padding: 10px;
+  }
+
   h2 {
-     width: 100%;
-     font-size: 2em;
+    width: 100%;
+    font-size: 2em;
   }
 
   main {
-      display: flex;
+    display: flex;
   }
 
   p {
-      margin-left: 15px;
-      text-align: left;
+    margin-left: 15px;
+    text-align: left;
   }
 }
