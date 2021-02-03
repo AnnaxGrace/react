@@ -1,20 +1,22 @@
 import React from 'react'
 
-function Article() {
+function Article(props) {
+    console.log(props)
+    console.log(props.what)
     return (
         <article>
-            <header>
-                <h2>Sample Article</h2>
-                <img src="https://via.placeholder.com/150" alt="placeholder"/>
+           <header>
+                <h2>{props.title}</h2>
+                {/* <img src={thumbnail} height="150px" width="150px" alt="placeholder"/> */}
             </header>
-            <main>
+            {/* <main>
                 <section>
-                    <p>Sample Article Section 1</p>
+                    <p>{content}</p>
                 </section>
                 <section>
                     <p>Sample Article Section 2</p>
                 </section>
-            </main>
+            </main>  */}
         </article>
     )
 }
