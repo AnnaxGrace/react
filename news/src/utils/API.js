@@ -13,6 +13,6 @@ export default {
     return axios.get("http://newsapi.org/v2/top-headlines?country=us&category=politics&apiKey=" + APIkey);
   },
   getWeather: function() {
-    return axios.get("https://randomuser.me/api/?results=200&nat=us");
+    return axios.get("https://newsapi.org/v2/everything?q=weather&apiKey=" + APIkey);
   },
 };
