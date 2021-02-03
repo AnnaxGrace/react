@@ -1,36 +1,27 @@
 import React from "react";
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
+import RoseLogo from "../assets/RoseWebsiteWhite.png";
 // Anna add a headlines here?
 function NavBar() {
   return (
     <nav>
-      <h1>TEK News</h1>
-      <span>Add your &lt;Link/&gt;'s to the Pages Here in the NavBar</span>
-      <p>
-        You will need to use React Router's Navigation system as opposed to 'a'
-        tags to achieve proper client side routing
-      </p>
+      <header>
+        <Link to="/">
+        <h1>
+          Conover <img src={RoseLogo} alt="roseLogo" /> Chronicle
+        </h1>
+        </Link>
+      </header>
+      <hr />
       <ul>
         <li>
-          <Link
-            to="/Sports"
-          >
-            Sports
-          </Link>
+          <Link to="/Sports">Sports</Link>
         </li>
         <li>
-        <Link
-            to="/Weather"
-          >
-            Weather
-          </Link>
+          <Link to="/Weather">Weather</Link>
         </li>
         <li>
-        <Link
-            to="/Politics"
-          >
-            Politics
-          </Link>
+          <Link to="/Politics">Politics</Link>
         </li>
       </ul>
     </nav>

@@ -21,7 +21,7 @@ function Politics() {
           key={i}
           title={article[i].title}
           thumbnail={article[i].urlToImage}
-          content={article[i].content}
+          description={article[i].description}
         />
       ))}
     </>

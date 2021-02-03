@@ -1,5 +1,5 @@
 import { HashRouter, Route } from "react-router-dom";
-import "./App.css";
+import "./App.scss";
 import NavBar from "./Components/NavBar";
 import Headlines from "./Views/Headlines";
 import Sports from "./Views/Sports";

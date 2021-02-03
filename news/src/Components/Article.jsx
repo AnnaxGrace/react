@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Article({title, thumbnail, content}) {
+function Article({title, thumbnail, description}) {
 
     return (
         <article>
@@ -10,7 +10,7 @@ function Article({title, thumbnail, content}) {
             </header>
             <main>
                 <section>
-                    <p>{content}</p>
+                    <p>{description}</p>
                 </section>
                 <section>
                     <p>Sample Article Section 2</p>

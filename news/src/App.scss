@@ -1,0 +1,31 @@
+$primary-color: #2a458e;
+$secondary-color: #c09793;
+
+nav {
+  background-color: white;
+  border: 2px solid $primary-color;
+
+  h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $primary-color;
+
+    img {
+        height: 50px;
+        margin: 10px;
+    }
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-evenly;
+
+    li {
+      list-style: none;
+    }
+    Link {
+        color: #2a458e;
+    }
+  }
+}
