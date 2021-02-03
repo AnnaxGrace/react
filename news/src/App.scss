@@ -1,15 +1,23 @@
 $primary-color: #2a458e;
-$secondary-color: #c09793;
+$secondary-color: #c48883;
 
 nav {
   background-color: white;
   border: 2px solid $primary-color;
+
+  a {
+    text-decoration: none;
+}
 
   h1 {
     display: flex;
     justify-content: center;
     align-items: center;
     color: $primary-color;
+    font-family: "Passion One", cursive;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 3rem;
 
     img {
         height: 50px;
@@ -20,12 +28,23 @@ nav {
   ul {
     display: flex;
     justify-content: space-evenly;
+    // background-color: $secondary-color;
+    margin: 0;
 
     li {
       list-style: none;
+      text-decoration: none;
     }
-    Link {
+
+    a {
         color: #2a458e;
+        font-family: "Passion One", cursive;
+        font-size: 1.5rem;
+    }
+
+    a:visited {
+        color: #2a458e;
+        text-decoration: none;
     }
   }
 }
