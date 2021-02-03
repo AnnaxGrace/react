@@ -1,51 +1,55 @@
-# Exercise 1 - React-todo
-
-For this exercise, you will build a TODO list app, written in React.js
-
-**Core Requirements:**
-* -View Todo List
-* -Add a todo
-* -Delete a todo
-* -Delete all todos
-* -Mark todo as completed
-* -App should have basic styling
-
-**Optional :**
-
-* Store data using another state management solution ([context](https://reactjs.org/docs/context.html), [redux](https://redux.js.org/), [recoil](https://recoiljs.org/), etc.)
-* Animations on deleting / adding todos
-* Incorporating a 3rd party library for functionality or styling.  (Material-ui,Reactstrap,Styled Components, SCSS)
-
-Below are some design ideas for todo list apps : 
+[![made-with-VSCode](https://img.shields.io/badge/Made%20with-VSCode-1f425f.svg)](https://code.visualstudio.com/)
+# Todo List
+<img src="./assets/homepage.png"
+     alt="Home Page"
+     style="margin-right: 10px; height: 300px;" />
 
 
-![todo](assets/todo-freecode.gif)
+## Description
+This repo is a notes application where you can add items to your list of things to do.
+## Table of Contents
+* [Installation](#installation)
+* [Usage](#usage)
+* [License](#license)
+* [Contributing](#contributing)
+* [Links](#Links)
+* [Tenchnologies](#Technologies)
+* [Developer](#Developers)
+
+## Installation
+npm i in react/todo
+## Usage
+This is a react app. You run it locally in react/todo in the terminal or bash with npm start.
+
+It is live with GitHub Pages
+
+## License
+MIT
+
+## Contributing
+No contributors allowed
+
+## Links
+* GitHub repository URL: https://github.com/AnnaxGrace/react/tree/master/todo
+* GitHub Pages Deployed URL: annaxgrace.github.io/react
+
+## Technologies
+
+### Languages 
+* HTML, CSS, React.js
+
+### FrameWorks
+* Bootstrap React
 
 
-![todo2](assets/todo-digiocean.png)
+## Developer
+
+### Anna Conover
+
+* Github username: annaxgrace
+* Email: anna.grace.conover@gmail.com
 
 
-![todo3](assets/todo-purple.png)
-
-
-![todo4](assets/todo-pusher.gif)
-
-
-![todo1](assets/blue-todo.jpg)
-## ********************************************************
-## Git Instructions
-
-- [ ] Create a template copy of this repository by clicking : "Use this template"
-- [ ] Name the repository the same name as the master template repository.  
-- [ ] Add your TM as collaborator
-- [ ] Clone YOUR repo to your local computer
-- [ ] Create a new branch: <code>git checkout -b `<firstName-lastName>`</code>.
-- [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
-- [ ] Push all of your commits: <code>git push origin `<firstName-lastName>`</code>.
-- [ ] When ready for your TM to review, open a Pull Request (PR) and add your TM as a collaborator.
-
-## ********************************************************
-
-
-
-
+<img src="https://avatars2.githubusercontent.com/u/61895571?s=460&u=51c1a5027c2ee815104a12b2aded2bcf51b2c6b7&v=4"
+     alt="Contributer Photo"
+     style="float: left; margin-right: 10px;" />
