@@ -1,10 +1,14 @@
 import React from "react";
+import { useHistory} from "react-router-dom";
 
 function Article(props) {
   const { title, thumbnail, description } = props;
+  const history = useHistory();
+
   const fullArticleDirect = () => {
       localStorage.setItem("article", JSON.stringify(props))
-    console.log("yay");
+      console.log("why")
+      history.push("/ArticleDetail");
   };
 
   return (

@@ -1,16 +1,17 @@
 //going to take data out of local storage
 
-import React from "react";
+import React, {useEffect} from "react";
 
 function Article() {
   
-    const fullArticleDirect = () => {
-    console.log("yay");
-  };
+    useEffect(() => {
+        const articleData = JSON.parse(localStorage.getItem("article"));
+        console.log(articleData)
+    },[]);
 
   return (
     <article>
-      <button onClick={fullArticleDirect}>
+      {/* <button onClick={fullArticleDirect}>
         <header>
           <h2>{title}</h2>
         </header>
@@ -20,7 +21,7 @@ function Article() {
             <p>{description}</p>
           </section>
         </main>
-      </button>
+      </button> */}
     </article>
   );
 }

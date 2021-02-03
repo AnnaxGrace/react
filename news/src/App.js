@@ -5,6 +5,7 @@ import Headlines from "./Views/Headlines";
 import Sports from "./Views/Sports";
 import Weather from "./Views/Weather";
 import Politics from "./Views/Politics";
+import ArticleDetail from "./Views/ArticleDetail";
 import Footer from "./Components/Footer";
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
               <Route exact path="/Sports" component={Sports} />
               <Route exact path="/Weather" component={Weather} />
               <Route exact path="/Politics" component={Politics} />
+              <Route exact path="/ArticleDetail" component={ArticleDetail} />
             </div>
           </HashRouter>
           {/* <Headlines />
