@@ -15,7 +15,7 @@ function Headlines() {
 
   return (
     <>
-      <h1>Headline News goes here: </h1>
+      <h1>Headlines: </h1>
       {articles.map((article, i) => (
         <Article
           key={i}

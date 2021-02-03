@@ -1,34 +1,44 @@
 $primary-color: #2a458e;
 $secondary-color: #c48883;
+$passion-font: "Passion One", cursive;
+$josefin-font: "Josefin Sans", sans-serif;
+
+.App {
+  font-family: $josefin-font;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-left: 30px;
+}
 
 nav {
   background-color: white;
-  border: 2px solid $primary-color;
+  border-bottom: 2px solid black;
 
   a {
     text-decoration: none;
-}
+  }
 
   h1 {
     display: flex;
     justify-content: center;
     align-items: center;
     color: $primary-color;
-    font-family: "Passion One", cursive;
+    font-family: $passion-font;
     text-transform: uppercase;
     text-decoration: none;
     font-size: 3rem;
 
     img {
-        height: 50px;
-        margin: 10px;
+      height: 50px;
+      margin: 10px;
     }
   }
 
   ul {
     display: flex;
     justify-content: space-evenly;
-    // background-color: $secondary-color;
     margin: 0;
 
     li {
@@ -37,14 +47,37 @@ nav {
     }
 
     a {
-        color: #2a458e;
-        font-family: "Passion One", cursive;
-        font-size: 1.5rem;
+      color: #2a458e;
+      font-family: $passion-font;
+      font-size: 1.5rem;
     }
 
     a:visited {
-        color: #2a458e;
-        text-decoration: none;
+      color: #2a458e;
+      text-decoration: none;
     }
+  }
+}
+
+article {
+  width: 85%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+  margin: 2em;
+  margin-left: 3em;
+  padding: 10px 5px;
+
+  h2 {
+     width: 100%;
+     font-size: 2em;
+  }
+
+  main {
+      display: flex;
+  }
+
+  p {
+      margin-left: 15px;
+      text-align: left;
   }
 }
