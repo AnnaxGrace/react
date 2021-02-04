@@ -14,11 +14,6 @@ function App() {
       <header className="App-header">
       <HashRouter basename="/">
         <NavBar />
-        {/* <img src={logo} className="App-logo" alt="logo" /> */}
-        {/* <div>
-          <br />
-          <p>Create a News Site</p>
-          <p>Set up a Single Page Application (SPA) with react-router</p> */}
             <div>
               <Route exact path="/" component={Headlines} />
               <Route exact path="/Sports" component={Sports} />
@@ -27,11 +22,6 @@ function App() {
               <Route exact path="/ArticleDetail" component={ArticleDetail} />
             </div>
           </HashRouter>
-          {/* <Headlines />
-          <Sports />
-          <Weather />
-          <Politics /> */}
-        {/* </div> */}
       </header>
       <Footer />
     </div>
