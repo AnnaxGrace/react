@@ -3,11 +3,9 @@ import { useHistory} from "react-router-dom";
 
 function Article(props) {
   const { title, urlToImage, description } = props.data;
-  console.log(props)
   const history = useHistory();
 
   const fullArticleDirect = () => {
-      console.log(props)
       localStorage.setItem("article", JSON.stringify(props))
       history.push("/ArticleDetail");
   };

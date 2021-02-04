@@ -1,34 +1,56 @@
-# Exercise 2 - News Site
+[![made-with-VSCode](https://img.shields.io/badge/Made%20with-VSCode-1f425f.svg)](https://code.visualstudio.com/)
+# Todo List
+<img src="./assets/homepage.png"
+     alt="Home Page"
+     style="margin-right: 10px; height: 300px;" />
 
-For this exercise, you will be leveraging a Public News API to create a basic News Site.
 
-Go to https://public-apis.io/category/news-apis, and select a News API of your choice to pull data from.  Note that you may need to spend some time reading the documentation (docs) of the API to understand how to use it.  
+## Description
+This repo is a notes application where you can add items to your list of things to do.
+## Table of Contents
+* [Installation](#installation)
+* [Usage](#usage)
+* [License](#license)
+* [Contributing](#contributing)
+* [Links](#Links)
+* [Tenchnologies](#Technologies)
+* [Developer](#Developers)
 
-You are required to create a Single Page Application (SPA) using React.js and React-Router. 
+## Installation
+npm i in react/news
 
-**Requirements**
+## Usage
+This is a react app. You run it locally in react/news in the terminal or bash with npm start.
 
-- Must implement Client Side Routing using React Router
-- Must have at least 3 linkable "Views" related to a News Site.  Sports, Weather, & Politics are provided, but feel free to add more at your discretion.  
-- Each View should display only the news related to that View.  (You should not be able to see Sports news on the Weather View for example.)
-- The Headline News View should be rendered on the Main page.  
-- User Interface (UI) should be fully styled and presentable.  
+To run it locally, you will need to create a .env file react/news that contains your API key from this website: https://newsapi.org/docs/get-started
 
-**Optional**
-- Each News Article summary / thumbnail must be clickable and route to another News Detail View that displays the entire article.
-- Style the App using SCSS
+Add your env line in the format: REACT_APP_API_KEY=yourkey
 
-## ********************************************************
-## Git Instructions
+It is live with GitHub Pages
 
-- [ ] Create a template copy of this repository by clicking : "Use this template"
-- [ ] Name the repository the same name as the master template repository.  
-- [ ] Add your TM as collaborator
-- [ ] Clone YOUR repo to your local computer
-- [ ] Create a new branch: <code>git checkout -b `<firstName-lastName>`</code>.
-- [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
-- [ ] Push all of your commits: <code>git push origin `<firstName-lastName>`</code>.
-- [ ] When ready for your TM to review, open a Pull Request (PR) and add your TM as a collaborator.
+## License
+MIT
 
-## ********************************************************
+## Contributing
+No contributors allowed
 
+## Links
+* GitHub repository URL: https://github.com/AnnaxGrace/react/tree/master/todo
+* GitHub Pages Deployed URL: annaxgrace.github.io/react
+
+## Technologies
+
+### Languages 
+* HTML, SCSS, React.js
+
+## Developer
+
+### Anna Conover
+
+* Github username: annaxgrace
+* Email: anna.grace.conover@gmail.com
+
+
+<img src="https://avatars2.githubusercontent.com/u/61895571?s=460&u=51c1a5027c2ee815104a12b2aded2bcf51b2c6b7&v=4"
+     alt="Contributer Photo"
+     style="float: left; margin-right: 10px;" />

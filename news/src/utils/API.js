@@ -1,5 +1,5 @@
 import axios from "axios";
-const APIkey = "105733080cec4d1b86ce0c0fac002451"
+const APIkey = process.env.REACT_APP_API_KEY
 
 
 export default {

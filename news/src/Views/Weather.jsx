@@ -8,7 +8,6 @@ function Weather() {
 
   useEffect(() => {
     API.getWeather().then((results) => {
-      console.log(results.data.articles);
       setArticles(selectTopFive(results.data.articles));
     });
   }, []);

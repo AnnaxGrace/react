@@ -8,14 +8,13 @@ function Politics() {
 
   useEffect(() => {
     API.getPolitics().then((results) => {
-      console.log(results.data.articles);
       setArticles(selectTopFive(results.data.articles));
     });
   }, []);
 
   return (
     <>
-      <h1>Politics:: </h1>
+      <h1>Politics: </h1>
       {articles.map((article, i) => (
         <Article
           key={i}

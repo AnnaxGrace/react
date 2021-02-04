@@ -8,7 +8,6 @@ function Sports() {
 
   useEffect(() => {
     API.getSports().then((results) => {
-      console.log(results.data.articles);
       setArticles(selectTopFive(results.data.articles));
     });
   }, []);

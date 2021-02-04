@@ -8,7 +8,6 @@ function Headlines() {
 
   useEffect(() => {
     API.getHeadlines().then((results) => {
-      console.log(results.data.articles);
       setArticles(selectTopFive(results.data.articles));
     });
   }, []);

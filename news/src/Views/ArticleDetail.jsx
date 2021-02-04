@@ -8,7 +8,6 @@ function ArticleDetail() {
 
   useEffect(() => {
     const articleData = JSON.parse(localStorage.getItem("article"));
-    console.log(articleData);
     setDetails({data: articleData.data});
   }, []);
 
