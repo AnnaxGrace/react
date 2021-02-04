@@ -15,14 +15,12 @@ function Sports() {
 
   return (
     <>
-      <h1>Sports News goes here: </h1>
+      <h1>Sports: </h1>
       {articles.map((article, i) => (
         <Article
-          key={i}
-          title={article[i].title}
-          thumbnail={article[i].urlToImage}
-          description={article[i].description}
-        />
+        key={i}
+        data={article[i]}
+      />
       ))}
     </>
   );

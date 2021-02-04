@@ -15,13 +15,11 @@ function Politics() {
 
   return (
     <>
-      <h1>Political News goes here: </h1>
+      <h1>Politics:: </h1>
       {articles.map((article, i) => (
         <Article
           key={i}
-          title={article[i].title}
-          thumbnail={article[i].urlToImage}
-          description={article[i].description}
+          data={article[i]}
         />
       ))}
     </>

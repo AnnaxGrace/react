@@ -1,29 +1,33 @@
-//going to take data out of local storage
 
-import React, {useEffect} from "react";
+import React, { useEffect, useState } from "react";
 
-function Article() {
-  
-    useEffect(() => {
-        const articleData = JSON.parse(localStorage.getItem("article"));
-        console.log(articleData)
-    },[]);
+function ArticleDetail() {
+  const [details, setDetails] = useState({
+    data: "",
+  });
+
+  useEffect(() => {
+    const articleData = JSON.parse(localStorage.getItem("article"));
+    console.log(articleData);
+    setDetails({data: articleData.data});
+  }, []);
 
   return (
     <article>
-      {/* <button onClick={fullArticleDirect}>
-        <header>
-          <h2>{title}</h2>
-        </header>
-        <main>
-          <img src={thumbnail} height="150px" width="150px" alt="placeholder" />
-          <section>
-            <p>{description}</p>
-          </section>
-        </main>
-      </button> */}
+      <h1>{details.data.title}</h1>
+      <img
+        src={details.data.urlToImage}
+        height="500px"
+        width="500px"
+        alt="placeholder"
+      />
+      <main>
+        <section>
+          <p style={{height: '700px'}}>{details.data.content}</p>
+        </section>
+      </main>
     </article>
   );
 }
 
-export default Article;
+export default ArticleDetail;

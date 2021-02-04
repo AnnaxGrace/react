@@ -15,14 +15,12 @@ function Weather() {
 
   return (
     <>
-      <h1>Weather News goes here: </h1>
+      <h1>Weather: </h1>
       {articles.map((article, i) => (
         <Article
-          key={i}
-          title={article[i].title}
-          thumbnail={article[i].urlToImage}
-          description={article[i].description}
-        />
+        key={i}
+        data={article[i]}
+      />
       ))}
     </>
   );

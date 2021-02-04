@@ -2,12 +2,13 @@ import React from "react";
 import { useHistory} from "react-router-dom";
 
 function Article(props) {
-  const { title, thumbnail, description } = props;
+  const { title, urlToImage, description } = props.data;
+  console.log(props)
   const history = useHistory();
 
   const fullArticleDirect = () => {
+      console.log(props)
       localStorage.setItem("article", JSON.stringify(props))
-      console.log("why")
       history.push("/ArticleDetail");
   };
 
@@ -18,7 +19,7 @@ function Article(props) {
           <h2>{title}</h2>
         </header>
         <main>
-          <img src={thumbnail} height="150px" width="150px" alt="placeholder" />
+          <img src={urlToImage} height="150px" width="150px" alt="article thumbnail" />
           <section>
             <p>{description}</p>
           </section>
