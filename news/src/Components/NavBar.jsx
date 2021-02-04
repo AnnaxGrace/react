@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import RoseLogo from "../assets/RoseWebsiteWhite.png";
-// Anna add a headlines here?
+
 function NavBar() {
   return (
     <nav>

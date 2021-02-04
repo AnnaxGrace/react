@@ -1,4 +1,4 @@
-import { HashRouter, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import "./App.scss";
 import NavBar from "./Components/NavBar";
 import Headlines from "./Views/Headlines";
@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-      <HashRouter basename="/">
+      <Router basename="/">
         <NavBar />
             <div>
               <Route exact path="/" component={Headlines} />
@@ -21,7 +21,7 @@ function App() {
               <Route exact path="/Politics" component={Politics} />
               <Route exact path="/ArticleDetail" component={ArticleDetail} />
             </div>
-          </HashRouter>
+          </Router>
       </header>
       <Footer />
     </div>
