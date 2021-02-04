@@ -6,7 +6,7 @@
 
 
 ## Description
-This repo is a notes application where you can add items to your list of things to do.
+This repo is a news application that searches for articles based on topics.
 ## Table of Contents
 * [Installation](#installation)
 * [Usage](#usage)
@@ -26,7 +26,7 @@ To run it locally, you will need to create a .env file react/news that contains 
 
 Add your env line in the format: REACT_APP_API_KEY=yourkey
 
-It is live with GitHub Pages
+It is not live since the newsAPI needs to be paid for to be live.
 
 ## License
 MIT
@@ -35,8 +35,7 @@ MIT
 No contributors allowed
 
 ## Links
-* GitHub repository URL: https://github.com/AnnaxGrace/react/tree/master/todo
-* GitHub Pages Deployed URL: annaxgrace.github.io/react
+* GitHub repository URL: https://github.com/AnnaxGrace/react/tree/master/news
 
 ## Technologies
 
